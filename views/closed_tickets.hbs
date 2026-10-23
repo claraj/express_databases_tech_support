@@ -1,0 +1,11 @@
+<h2>Closed tickets</h2>
+
+{{# each tickets }}
+<div>
+    {{this.id}}
+    {{this.description}} |||
+{{ this.reporter }} |||
+{{ this.dateReported }}
+
+
+{{/each}}

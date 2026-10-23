@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support Ticket Manager</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+</head>
+<body>
+
+<h1>Support Ticket Manager</h1>
+
+<div>
+ {{#if success_messages }}
+    {{#each success_messages }}
+        <li>{{ this }} </li>
+    {{/each}}
+{{/if}}
+<br>
+{{#if error_messages}}
+    {{#each error_messages }}
+        <li>{{ this }} </li>
+    {{/each}}
+{{/if}}
+</div>
+
+<div>
+{{{ body }}}
+</div>
+
+<div>
+    <a href="/open-tickets">Open Tickets</a>
+    <a href="/closed-tickets">Closed Tickets</a>
+    <a href="/">Add New Ticket</a>
+
+</div>
+    
+</body>
+</html>

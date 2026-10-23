@@ -1,0 +1,15 @@
+<h2>Open tickets</h2>
+
+{{# each tickets }}
+<div>
+    {{this.id}}
+
+    {{this.description}} |||
+{{ this.reporter }} |||
+{{ this.dateReported }}
+
+<form action="/close-ticket/{{ this.id }}" method="POST">
+    <button type="submit">Close ticket</button>
+</form>
+</div>
+{{/each}}
